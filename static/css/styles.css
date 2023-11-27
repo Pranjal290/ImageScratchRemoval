@@ -1,0 +1,56 @@
+/* Red tone background */
+body {
+    background-color: #ffff; 
+}
+
+/* Navbar customization */
+.navbar {
+    background-color: #dc3545 !important; /* Bootstrap's red color */
+}
+
+/* Adjusting some form element styles */
+.form-control {
+    border-color: #dc3545; /* Red border color for form controls */
+}
+
+/* Additional customizations */
+h2 {
+    color: #dc3545; /* Red text color for headings */
+}
+
+.btn-primary {
+    background-color: #dc3545; /* Red button color */
+    border-color: #dc3545; /* Red button border color */
+}
+
+/* Custom classes for slider color */
+input[type="range"] {
+    /* Webkit */
+    --webkit-slider-thumb-color: #dc3545; /* Red color for slider thumb in Webkit browsers */
+    --webkit-slider-runnable-track-color: #dc3545; /* Red color for slider track in Webkit browsers */
+
+    /* Mozilla */
+    --moz-range-thumb-color: #dc3545; /* Red color for slider thumb in Mozilla browsers */
+    --moz-range-track-color: #dc3545; /* Red color for slider track in Mozilla browsers */
+
+    /* MS Edge */
+    --ms-thumb-color: #dc3545; /* Red color for slider thumb in MS Edge */
+    --ms-track-color: #dc3545; /* Red color for slider track in MS Edge */
+
+    /* Default */
+    --thumb-color: #dc3545; /* Red color for slider thumb (default) */
+    --track-color: #dc3545; /* Red color for slider track (default) */
+}
+
+/* Adjust the text color of the span displaying slider values */
+span {
+    color: #dc3545; /* Red color for slider values */
+}
+
+/* Hiding uploaded and processed image containers initially */
+#uploadedImageTitle,
+#uploadedImage,
+#processedImageTitle,
+#processedImage {
+    display: none;
+}

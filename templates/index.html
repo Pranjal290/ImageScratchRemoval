@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Image Scratch Removal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for extra space */
+        .image-container {
+            margin-bottom: 20px; /* Adjust the space as needed */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Image Scratch Removal</a>
+    </nav>
+    <div class="container mt-4">
+        <h2>Upload an Image</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" class="form-control-file" id="uploadInput" accept="image/*" name="imageFile">
+            </div>
+            <div class="form-group">
+                <label for="houghThreshold">Hough Threshold: <span id="houghThresholdValue">230</span></label>
+                <input type="range" class="form-control-range" id="houghThreshold" name="houghThreshold" min="0" max="255" value="230">
+            </div>
+            <div class="form-group">
+                <label for="cannyThreshold1">Canny Threshold 1: <span id="cannyThreshold1Value">50</span></label>
+                <input type="range" class="form-control-range" id="cannyThreshold1" name="cannyThreshold1" min="0" max="255" value="50">
+            </div>
+            <div class="form-group">
+                <label for="cannyThreshold2">Canny Threshold 2: <span id="cannyThreshold2Value">150</span></label>
+                <input type="range" class="form-control-range" id="cannyThreshold2" name="cannyThreshold2" min="0" max="255" value="150">
+            </div>
+            <button type="submit" class="btn btn-primary">Process Image</button>
+        </form>
+        <br>
+        <div class="row">
+            <div class="col-md-4 image-container">
+                <h2 id="uploadedImageTitle" style="display: none;">Uploaded Image</h2>
+                <img id="uploadedImage" src="#" alt="Uploaded Image" class="img-fluid" style="display: none;">
+            </div>
+            <div class="col-md-4 image-container">
+                <h2 id="processedImageTitle1" style="display: none;">Processed Image 1</h2>
+                <img id="processedImage1" src="#" alt="Processed Image 1" class="img-fluid" style="display: none;">
+            </div>
+            <div class="col-md-4 image-container">
+                <h2 id="processedImageTitle2" style="display: none;">Processed Image 2</h2>
+                <img id="processedImage2" src="#" alt="Processed Image 2" class="img-fluid" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="./static/js/scripts.js"></script>
+</body>
+</html>
